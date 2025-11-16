@@ -1,9 +1,5 @@
-# Source - https://stackoverflow.com/a
-# Posted by nativelectronic
-# Retrieved 2025-11-16, License - CC BY-SA 4.0
-
 [build]
-  command = "CI='' npm run build"
+  command = "npm run build"
   publish = "/build"
   base ="/"
 
