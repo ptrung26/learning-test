@@ -1,0 +1,5 @@
+{
+  "id": "proc-generator",
+  "name": "SQL Procedure Generator",
+  "description": "Tạo nhanh Stored Procedure từ câu INSERT"
+}

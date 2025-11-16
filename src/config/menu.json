@@ -1,0 +1,61 @@
+[
+  {
+    "key": "/lesson",
+    "label": "Lý thuyết",
+    "icon": "BookOutlined",
+    "children": [
+      {
+        "key": "/lesson/test-types",
+        "label": "Các loại Test",
+        "children": [
+          { "key": "/lesson/test-types/functional", "label": "Functional Testing" },
+          { "key": "/lesson/test-types/non-functional", "label": "Non-functional Testing" },
+          { "key": "/lesson/test-types/smoke", "label": "Smoke Test" },
+          { "key": "/lesson/test-types/sanity", "label": "Sanity Test" },
+          { "key": "/lesson/test-types/regression", "label": "Regression Test" }
+        ]
+      },
+      {
+        "key": "/lesson/api-testing",
+        "label": "Test API",
+        "children": [
+          { "key": "/lesson/api-testing/khai-niem", "label": "API Testing là gì?" },
+          { "key": "/lesson/api-testing/http-methods", "label": "HTTP Methods (GET, POST, PUT…)" },
+          { "key": "/lesson/api-testing/status-codes", "label": "HTTP Status Codes" },
+          { "key": "/lesson/api-testing/authentication", "label": "Các loại Auth (Token, Basic, OAuth2)" },
+          { "key": "/lesson/api-testing/request-response", "label": "Request & Response Structure" },
+          { "key": "/lesson/api-testing/request-parameters", "label": "Request Parameters" },
+          { "key": "/lesson/api-testing/postman-co-ban", "label": "Postman cơ bản" },
+          { "key": "/lesson/api-testing/postman-advanced", "label": "Postman nâng cao (Pre-script, Tests)" },
+          { "key": "/lesson/api-testing/validate-response", "label": "Validation Response Body" },
+          { "key": "/lesson/api-testing/contract-testing", "label": "Contract Testing (JSON Schema)" }
+        ]
+      },
+      {
+        "key": "/lesson/stlc",
+        "label": "STLC",
+        "children": [
+          { "key": "/lesson/stlc/introduction", "label": "STLC là gì?" },
+          { "key": "/lesson/stlc/phases", "label": "6 giai đoạn của STLC" }
+        ]
+      },
+      {
+        "key": "/lesson/sdlc",
+        "label": "SDLC",
+        "children": [
+          { "key": "/lesson/sdlc/waterfall", "label": "Mô hình Waterfall" },
+          { "key": "/lesson/sdlc/agile", "label": "Mô hình Agile/Scrum" },
+          { "key": "/lesson/sdlc/v-model", "label": "Mô hình V-Model" }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "/tools",
+    "label": "Công cụ hỗ trợ",
+    "icon": "ToolOutlined",
+    "children": [
+      { "key": "/tools/proc-generator", "label": "SQL Procedure Generator" }
+    ]
+  }
+]

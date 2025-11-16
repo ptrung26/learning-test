@@ -1,0 +1,64 @@
+.markdown-body {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 16px;
+    margin: 0 auto;
+    word-break: break-word;
+}
+
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 12px 0;
+}
+
+.markdown-body h1 {
+    font-size: 1.6rem;
+}
+
+.markdown-body h2 {
+    font-size: 1.4rem;
+}
+
+.markdown-body h3 {
+    font-size: 1.2rem;
+}
+
+.markdown-body table {
+    width: 100% !important;
+    margin: 0 auto;
+    background: white;
+    border: none !important;
+}
+
+.markdown-body table tr th,
+.markdown-body table tr td {
+    white-space: normal;
+}
+
+.markdown-body pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.markdown-body ul {
+    list-style: disc !important;
+}
+
+.markdown-body ol {
+    list-style: decimal !important;
+}
+
+.markdown-body li::marker {
+    color: #444 !important;
+}
+
+.markdown-content hr {
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+}
