@@ -32,14 +32,6 @@
         ]
       },
       {
-        "key": "/lesson/stlc",
-        "label": "STLC",
-        "children": [
-          { "key": "/lesson/stlc/introduction", "label": "STLC là gì?" },
-          { "key": "/lesson/stlc/phases", "label": "6 giai đoạn của STLC" }
-        ]
-      },
-      {
         "key": "/lesson/sdlc",
         "label": "SDLC",
         "children": [
