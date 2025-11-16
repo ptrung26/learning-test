@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Card, Spin } from "antd";
+import { Card, Spin, Image } from "antd";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
@@ -50,7 +50,7 @@ export default function MarkdownReader() {
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeRaw]}
                     components={{
-
+                      
                         code({ node, className, children }) {
                             const match = /language-(\w+)/.exec(className || "");
                             const isInline =
@@ -71,7 +71,7 @@ export default function MarkdownReader() {
                             );
                         },
 
-
+                        
                         table({ children }) {
                             return (
                                 <div className="overflow-x-auto my-6">
@@ -81,7 +81,6 @@ export default function MarkdownReader() {
                                 </div>
                             );
                         },
-
                         th({ children }) {
                             return (
                                 <th className="border border-gray-300 bg-gray-50 px-4 py-2 text-left font-medium">
@@ -89,7 +88,6 @@ export default function MarkdownReader() {
                                 </th>
                             );
                         },
-
                         td({ children }) {
                             return (
                                 <td className="border border-gray-200 px-4 py-2">
@@ -97,8 +95,25 @@ export default function MarkdownReader() {
                                 </td>
                             );
                         },
+
                         hr() {
                             return <hr className="my-6 border-gray-300" />;
+                        },
+
+                        img({ src, alt }) {
+                            return (
+                                <Image
+                                    src={src || ""}
+                                    alt={alt}
+                                    className="my-3 rounded-md"
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto",
+                                        cursor: "zoom-in"
+                                    }}
+                                    preview={true}
+                                />
+                            );
                         }
                     }}
                 >
