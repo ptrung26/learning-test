@@ -18,7 +18,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
 
                 <Link
-                    to="/lesson/test-types/intro"
+                    to="/lesson/test-types/functional"
                     className="bg-white shadow-sm border border-gray-200 rounded-xl p-6 hover:shadow-md transition block"
                 >
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">📘 Bài học Tester</h3>
@@ -31,7 +31,7 @@ export default function HomePage() {
                 </Link>
 
                 <Link
-                    to="/extensions/proc-generator"
+                    to="/tools/proc-generator"
                     className="bg-white shadow-sm border border-gray-200 rounded-xl p-6 hover:shadow-md transition block"
                 >
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">🧩 Extensions</h3>
