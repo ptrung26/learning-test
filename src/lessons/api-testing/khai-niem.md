@@ -199,8 +199,8 @@ Right click → **Copy → Copy as cURL**
 ## 🧠 Ghi nhớ nhanh
 
 > API Testing = kiểm tra "bộ não xử lý" của hệ thống
-> Không cần UI -- test trực tiếp backend
-> Nhanh -- chính xác -- bao phủ logic tốt hơn UI test
+> Không cần UI - test trực tiếp backend
+> Nhanh - chính xác - bao phủ logic tốt hơn UI test
 
 ------------------------------------------------------------------------
 
