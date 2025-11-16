@@ -46,43 +46,64 @@ export default function Sidebar() {
 
     if (!isMobile) {
         return (
-            <Sider
-                width={260}
-                theme="light"
-                className="border-r border-gray-200 bg-white !min-h-screen"
-                collapsible={false}
-            >
-                <div
-                    className="px-6 py-6 border-b border-gray-200 cursor-pointer select-none"
-                    onClick={goHome}
-                >
-                    <span className="font-semibold text-gray-800 text-[16px]">
-                        Tester Learning
-                    </span>
-                </div>
+           <Sider
+    width={260}
+    theme="light"
+    collapsedWidth={0}
+    collapsed={!open}
+    onCollapse={(v) => setOpen(!v)}
+    className={`
+        fixed left-0 top-0 z-[2001] h-screen 
+        border-r border-gray-200 bg-white
+        transform transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)]
+        ${open ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}
+    `}
+>
+    {/* HEADER */}
+    <div
+        className="px-6 py-6 border-b border-gray-200 flex items-center justify-between cursor-pointer select-none"
+        onClick={() => {
+            goHome();
+            setOpen(false);
+        }}
+    >
+        <span className="font-semibold text-gray-800 text-[16px]">
+            Tester Learning
+        </span>
+        <button onClick={() => setOpen(false)}>
+            <Icons.CloseOutlined />
+        </button>
+    </div>
 
-                <Menu
-                    mode="inline"
-                    items={generateMenuItems(menuData)}
-                    selectedKeys={[location.pathname]}
-                    onClick={({ key }) => navigate(key)}
-                    style={{
-                        borderRight: "none",
-                        background: "white",
-                        padding: "12px 12px",
-                    }}
-                    className="
-                        [&_.ant-menu-item]:rounded-md
-                        [&_.ant-menu-item]:px-4
-                        [&_.ant-menu-item]:py-[6px]
-                        [&_.ant-menu-item]:mx-1
-                        [&_.ant-menu-item:hover]:bg-gray-100
-                        [&_.ant-menu-item-selected]:bg-blue-50
-                        [&_.ant-menu-item-selected]:text-blue-600
-                        [&_.ant-menu-item-selected]:font-medium
-                    "
-                />
-            </Sider>
+    {/* ⭐⭐ SCROLL WRAPPER CHUẨN NHẤT ⭐⭐ */}
+    <div className="overflow-y-auto overflow-x-hidden h-[calc(100vh-80px)] px-1">
+        <Menu
+            mode="inline"
+            items={generateMenuItems(menuData)}
+            selectedKeys={[location.pathname]}
+            onClick={({ key }) => {
+                navigate(key);
+                setOpen(false);
+            }}
+            style={{
+                borderRight: "none",
+                background: "white",
+                padding: "12px 12px",
+            }}
+            className="
+                [&_.ant-menu-item]:rounded-md
+                [&_.ant-menu-item]:px-4
+                [&_.ant-menu-item]:py-[6px]
+                [&_.ant-menu-item]:mx-1
+                [&_.ant-menu-item:hover]:bg-gray-100
+                [&_.ant-menu-item-selected]:bg-blue-50
+                [&_.ant-menu-item-selected]:text-blue-600
+                [&_.ant-menu-item-selected]:font-medium
+            "
+        />
+    </div>
+</Sider>
+
         );
     }
 
@@ -116,11 +137,18 @@ export default function Sidebar() {
                 className={`
                     fixed left-0 top-0 z-[2001] h-screen 
                     border-r border-gray-200 bg-white
+                    overflow-y-auto overflow-x-hidden            /* ⭐ FIX SCROLL MOBILE */
                     transform transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)]
                     ${open ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}
                 `}
             >
-                <div className="px-6 py-6 border-b border-gray-200 flex items-center justify-between">
+                <div
+                    className="px-6 py-6 border-b border-gray-200 flex items-center justify-between cursor-pointer select-none"
+                    onClick={() => {
+                        goHome();
+                        setOpen(false);
+                    }}
+                >
                     <span className="font-semibold text-gray-800 text-[16px]">
                         Tester Learning
                     </span>
