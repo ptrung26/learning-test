@@ -42,6 +42,8 @@ export default function Sidebar() {
     const location = useLocation();
     const navigate = useNavigate();
 
+    const goHome = () => navigate("/");
+
     if (!isMobile) {
         return (
             <Sider
@@ -50,7 +52,10 @@ export default function Sidebar() {
                 className="border-r border-gray-200 bg-white !min-h-screen"
                 collapsible={false}
             >
-                <div className="px-6 py-6 border-b border-gray-200">
+                <div
+                    className="px-6 py-6 border-b border-gray-200 cursor-pointer select-none"
+                    onClick={goHome}
+                >
                     <span className="font-semibold text-gray-800 text-[16px]">
                         Tester Learning
                     </span>
