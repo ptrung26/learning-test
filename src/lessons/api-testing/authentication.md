@@ -23,7 +23,7 @@ Trong API Testing, hiểu rõ các loại Auth giúp tester viết test chuẩn,
 
 ### 📊 Comparison
 - [8. So sánh các loại Auth](#-8-so-sanh-cac-loai-auth)
-
+- [9. Cách lấy nhanh token từ API Web](#-9-get-token-from-api)
 ---
 
 #  1. Basic Authentication
@@ -34,6 +34,8 @@ Gửi `username:password` dạng Base64 trong Header:
 ```
 Authorization: Basic base64(username:password)
 ```
+
+![Postman](/images/api-testing/post-man-authen-basic.png)
 
 ### ✔ Ưu điểm:
 - Dễ test  
@@ -62,6 +64,8 @@ hoặc query:
 GET /api/list?key=12345
 ```
 
+![Postman](/images/api-testing/post-man-headers.png)
+
 ### ✔ Ưu điểm:
 - Dễ test  
 - Dùng nhiều với public API
@@ -79,6 +83,8 @@ GET /api/list?key=12345
 ```
 Authorization: Bearer <jwt-token>
 ```
+
+![Postman](/images/api-testing/post-man-authentication-jwt.png)
 
 ### ✔ Dùng cho:
 - SPA (React, Angular, Vue)  
@@ -143,6 +149,7 @@ Server trả về:
 Set-Cookie: sessionId=xyz; HttpOnly
 ```
 
+
 ### ✔ Dùng trong:
 - Web cũ (PHP, Laravel, ASP.NET MVC)  
 - Hệ thống nội bộ  
@@ -163,6 +170,8 @@ Set-Cookie: accessToken=xxx; HttpOnly; Secure; SameSite=Strict
 ```
 
 Browser tự gửi lại cookie khi gọi API.
+
+![Postman](/images/api-testing/post-man-authentication-jwt.png)
 
 ---
 
@@ -222,6 +231,32 @@ Browser tự gửi lại cookie khi gọi API.
 | Session | ✔ | ✔ | Web truyền thống |
 
 ---
+
+## 9. 🪪 Lấy nhanh Token từ API Web bằng DevTools (ĐÚNG LUỒNG THỰC TẾ)
+
+Khi Web App chạy, trình duyệt luôn tự gửi token kèm với mỗi API call.  
+Tester có thể lấy token trực tiếp từ **Chrome DevTools** mà không cần backend cấp.
+
+Token có thể nằm ở 4 nơi:
+
+- **A. Cookie**
+- **B. Authorization Header**
+- **C. Response Body (API login)**
+- **D. LocalStorage / SessionStorage**
+
+---
+
+## 🔍 — Mở Network
+
+1. Mở trang web → đăng nhập.  
+2. Nhấn **F12** → DevTools.  
+3. Chọn tab **Network**.  
+4. Chọn filter **Fetch/XHR** (chỉ hiện API).  
+5. Tick **Preserve log**.  
+6. Reload trang để API chạy lại.
+7. Kiểm tra trong **Request Headers** (Chủ yếu nằm ở đây)
+
+![Postman](/images/api-testing/api-web-get-token.png)
 
 # 🎯 Kết luận
 

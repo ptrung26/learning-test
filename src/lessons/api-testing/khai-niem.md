@@ -13,7 +13,7 @@ tiếp tầng backend.
 ## 📘 Danh mục nội dung
 
 ### 🌐 API Testing Basics
-- [1. API là gì?](#-1-api-là-gì)
+- [1. API Testing là gì?](#-1-api-là-gì)
 - [2. API Testing kiểm tra những gì?](#-2-api-testing-kiểm-tra-những-gì)
 
 ### 🔍 Practical Examples
@@ -161,6 +161,8 @@ Khi không có tài liệu API, bạn có thể lấy API trực tiếp từ web
 6. Thực hiện chức năng cần bắt API trên web
 
 → API sẽ xuất hiện ở danh sách Network.
+
+![Postman](/images/api-testing/api-web-get-token.png)
 
 ---
 

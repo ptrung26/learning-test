@@ -74,6 +74,7 @@ Ví dụ:
 ```
 GET /api/products?page=1&pageSize=10&keyword=iphone
 ```
+![Postman](/images/api-testing/post-man-query-params.png)
 
 Trong Postman:
 - Tab **Params**  
@@ -91,6 +92,8 @@ Ví dụ:
 ```
 POST /api/users
 ```
+
+![Postman](/images/api-testing/post-man-body-json.png)
 
 Body:
 ```json
@@ -136,9 +139,11 @@ Authorization: Bearer <token>
 Content-Type: application/json
 ```
 
+![Postman](/images/api-testing/post-man-authentication-jwt.png)
+
 Trong Postman:
-- Tab **Headers → Add**  
-- Key: Authorization  
+- Tab **Authorization → Add**  
+- Key: Bearer Token  
 - Value: Bearer xxx  
 
 ---
@@ -149,7 +154,12 @@ Trong Postman:
 x-api-key: 12345
 ```
 
-Giống như header ở trên.
+Trong Postman:
+- Tab **Headers → Add**  
+- Key: Authorization  
+- Value: Bearer xxx  
+
+![Postman](/images/api-testing/post-man-headers.png)
 
 ---
 
@@ -161,6 +171,8 @@ Dùng để đổi môi trường nhanh:
 - Click Environment → Add  
 - baseUrl  
 - token  
+
+![Postman](/images/api-testing/post-man-environment-collections.png)
 
 ### Sử dụng:
 ```
@@ -180,6 +192,9 @@ Authorization: Bearer {{token}}
 - Create collection  
 - Đặt tên module  
 - Lưu các API liên quan vào cùng collection  
+
+
+![Postman](/images/api-testing/post-man-collections.png)
 
 Tester thường chia:
 - Auth  
